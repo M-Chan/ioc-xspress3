@@ -61,3 +61,6 @@ RUN ibek support apt-install-runtime-packages
 
 # launch the startup script with stdio-expose to allow console connections
 CMD ["bash", "-c", "${IOC}/start.sh"]
+
+COPY ibek-support/xspress3/ xspress3/
+RUN ansible.sh xspress3

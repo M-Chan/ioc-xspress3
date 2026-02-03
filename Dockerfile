@@ -27,6 +27,9 @@ WORKDIR ${SOURCE_FOLDER}/ibek-support
 COPY ibek-support/_ansible _ansible
 ENV PATH=$PATH:${SOURCE_FOLDER}/ibek-support/_ansible
 
+COPY ibek-support/xspress3/ xspress3/
+RUN ansible.sh xspress3
+
 # get the ioc source and build it
 COPY ioc ${SOURCE_FOLDER}/ioc
 RUN ansible.sh ioc
@@ -49,6 +52,3 @@ RUN ibek support apt-install-runtime-packages
 
 # launch the startup script with stdio-expose to allow console connections
 CMD ["bash", "-c", "${IOC}/start.sh"]
-
-COPY ibek-support/xspress3/ xspress3/
-RUN ansible.sh xspress3

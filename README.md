@@ -29,3 +29,4 @@ The vscode developer container auto forwards the channel access ports on the loo
 export EPICS_CA_NAME_SERVERS=127.0.0.1:5064
 caget IOCNAME:PVNAME
 ```
+trigger ci

@@ -1,5 +1,5 @@
 # ibek>=3.3.2
-ibek @ git+https://github.com/epics-containers/ibek-support.git@xpress3
+git+https://github.com/epics-containers/ibek.git@xpress3
 # to install direct from github during development in a branch
 # git+https://github.com/epics-containers/ibek.git@fix-extract-assets
 stdio-socket>=1.2.0
